@@ -15,7 +15,7 @@
 1.
 
 ```sql
-SELECT DISTINCT * FROM `students` INNER JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id` INNER JOIN `courses` ON `degrees`.`id` = `courses`.`degree_id` WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
+SELECT DISTINCT * FROM `students` INNER JOIN `degrees` ON `students`.`degree_id` LIKE `degrees`.`id` INNER JOIN `courses` ON `degrees`.`id` LIKE `courses`.`degree_id` WHERE `degrees`.`name` LIKE 'Corso di Laurea in Economia';
 ```
 
 2.
